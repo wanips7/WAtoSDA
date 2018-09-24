@@ -17,28 +17,28 @@ const
   LOG_PROG_INFO = 'WinAuth to SDA converter ' + PROG_VER + sLineBreak + 'Author: Python R.G.' + sLineBreak;
   LOG_FILES_FOUND = 'Files found. Press any key to start converting.';
   LOG_FILES_NOT_FOUND = 'Files not found. Put export file to the ''Import'' folder. Press any key to exit.';
-  LOG_CONVERSION_COMPLETE = 'Conversion complete. Converted: %d. Press any key to exit.';
+  LOG_CONVERTING_COMPLETE = 'Converting complete. Converted: %d. Press any key to exit.';
 
 const
   SDA_MAFILE_TEMPLATE =
-  '{"shared_secret":"%s",' +
-  '"serial_number":"%s",' +
-  '"revocation_code":"%s",' +
-  '"uri":"otpauth://totp/Steam:%s&issuer=Steam",' +
-  '"server_time":%s,' +
-  '"account_name":"%s",' +
-  '"token_gid":"%s",' +
-  '"identity_secret":"%s",' +
-  '"secret_1":"%s",' +
-  '"status":%s,' +
-  '"device_id":"android:%s",' +
-  '"fully_enrolled":true,' +
-  '"Session":{"SessionID":"%s",' +
-  '"SteamLogin":"%s",' +
-  '"SteamLoginSecure":"%s",' +
-  '"WebCookie":"%s",' +
-  '"OAuthToken":"%s",' +
-  '"SteamID":%s}}';
+    '{"shared_secret":"%s",' +
+    '"serial_number":"%s",' +
+    '"revocation_code":"%s",' +
+    '"uri":"otpauth://totp/Steam:%s&issuer=Steam",' +
+    '"server_time":%s,' +
+    '"account_name":"%s",' +
+    '"token_gid":"%s",' +
+    '"identity_secret":"%s",' +
+    '"secret_1":"%s",' +
+    '"status":%s,' +
+    '"device_id":"android:%s",' +
+    '"fully_enrolled":true,' +
+    '"Session":{"SessionID":"%s",' +
+    '"SteamLogin":"%s",' +
+    '"SteamLoginSecure":"%s",' +
+    '"WebCookie":"%s",' +
+    '"OAuthToken":"%s",' +
+    '"SteamID":%s}}';
 
 var
   WinAuthFileName: string = '';
@@ -167,7 +167,7 @@ begin
 
       ExportToSDA;
 
-      Writeln(Format(LOG_CONVERSION_COMPLETE, [ConvertedCount]));
+      Writeln(Format(LOG_CONVERTING_COMPLETE, [ConvertedCount]));
 
     end
     else

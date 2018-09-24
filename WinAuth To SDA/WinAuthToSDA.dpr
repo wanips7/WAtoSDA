@@ -159,6 +159,11 @@ end;
 
 begin
   try
+    if not DirectoryExists(GetCurrentDir + '\Export\') then
+      CreateDir(GetCurrentDir + '\Export\');
+    if not DirectoryExists(GetCurrentDir + '\Import\') then
+      CreateDir(GetCurrentDir + '\Import\');
+
     if WAFilesFound then
     begin
       Writeln(LOG_PROG_INFO);

@@ -6,5 +6,4 @@ Instruction:
 3. Import files from 'Export' folder to SDA
 4. Select 'Login again' for each account
 
-
-[Download](https://github.com/pythonrg/WinAuthToSDAConverter/releases/latest)
+[Download](https://github.com/wanips7/WinAuthToSDAConverter/releases/latest)
